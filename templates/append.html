@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mt-4">
+<h2>従業員追加</h2>
+<form action="/add" method="POST">
+    <p>
+        <label for="name">従業員名</label>
+        <input name="name"></input>
+    </p>
+    <p>
+        <label for="mail">メールアドレス</label>
+        <input name="mail"></input>
+    </p>
+    <p>
+        <label for="name">リモートワークの有無</label>
+        <input type="checkbox" name="is_remote">
+    </p>
+        <label for="name">管理者権限</label>
+        <input type="checkbox" name="is_approve">
+    <p>
+        <label for="department">部署</label>
+        <input name="department"></input>
+    </p>
+    </p> 
+    <p>
+        <label for="year">勤続年数</label></p>
+        <input type="number" name="year" min="0">
+    </p>
+    <input type="submit" value="Add"/>
+</form>
+</div>
+{% endblock %}

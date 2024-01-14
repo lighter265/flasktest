@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!--pタグの下にaタグを追加-->
+<div class="container mt-4">
+    <h2>従業員一覧</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">名前</th>
+              <th scope="col">メール</th>
+              <th scope="col">リモート状況</th>
+              <th scope="col">管理者権限</th>
+              <th scope="col">部署</th>
+              <th scope="col">勤続年数</th>
+              <th scope="col">削除</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for d in data %}
+            <tr>
+              <th scope="row">{{ d.id }}</th>
+              <td>{{ d.name }}</td>
+              <td>{{ d.mail }}</td>
+              {% if d.is_remote %}
+                <td>リモート</td>
+              {% else %}
+                <td>出勤</td>
+              {% endif %}
+              {% if d.is_approve %}
+                <td>有</td>
+              {% else %}
+                <td>無</td>
+              {% endif %}
+              <td>{{ d.department }}</td>
+              <td>{{ d.year }}年</td>
+              <td><a href="/del_todo/{{ d.id }}">[ delete ]</a></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+    </table>
+</div>
+
+<!---------->
+{% endblock %}
