@@ -20,4 +20,7 @@
 <ul>・データベース構造の定義と利用</ul>
 
 <h3>動作ページ概要</h3>
-
+<ul>・一覧画面</ul>
+<img width="910" alt="itiran" src="https://github.com/lighter265/flasktest/assets/1709721/5808221c-38a9-48b1-8304-58083075646c">
+<ul>・追加画面</ul>
+<img width="311" alt="tsuika" src="https://github.com/lighter265/flasktest/assets/1709721/0f5203da-5b99-45dc-9286-b6cc6ea958c6">
